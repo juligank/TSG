@@ -7,6 +7,9 @@ package Modelo;
 
 //import java.sql.Date;
 
+
+import java.sql.Timestamp;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 
@@ -21,11 +24,11 @@ public class User {
  String lastname;
  String username;
  String passwd;
- Date birth;
  String email;
  String phone;
  String cellphone;
- String Status;
+ String enable;
+ String dateofbirth;
 
 
 public User(){
@@ -34,11 +37,11 @@ public User(){
   lastname = "";
   username = "";
   passwd = "";
-  Date birth = null;
+  dateofbirth ="";
   email = "";
   phone = "";
   cellphone = "";
-  Status = "";
+  enable = "";
 }
 
     public String getDni(){
@@ -82,12 +85,12 @@ public User(){
         this.passwd = passwd;
     }
 
-    public Date getBirth() {
-        return birth;
+    public String getDateOfBirth() {
+        return dateofbirth;
     }
 
-    public void setBirth(Date birth) {
-        this.birth = birth;
+    public void setDateOfBirth(String birth) {
+        this.dateofbirth = dateofbirth;
     }
 
     public String getEmail() {
@@ -114,11 +117,11 @@ public User(){
         this.cellphone = cellphone;
     }
 
-    public String getStatus() {
-        return Status;
+    public String getEnable() {
+        return enable;
     }
 
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setEnable(String enable) {
+        this.enable = enable;
     }
 }
